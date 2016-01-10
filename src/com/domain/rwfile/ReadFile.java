@@ -70,8 +70,9 @@ public class ReadFile {
             //新建文件对象
             //arg:新文件名,
             File newfile = new File("newtext.txt");
-            //文件输出流,如果文件不存在,会自动创建这个文件(字节流),如果文件存在会被完全覆盖
-            FileOutputStream fos = new FileOutputStream(newfile);
+            //文件输出流,如果文件不存在,会自动创建这个文件(字节流),如果文件存在会被完全覆盖,
+            //FileOutputStream(arg1:字符串或者文件名, arg2:true追加写入,false覆盖写入)
+            FileOutputStream fos = new FileOutputStream(newfile,true);
             //写入流(字符流)
             OutputStreamWriter osw = new OutputStreamWriter(fos,"UTF-8");
             //缓冲写入
